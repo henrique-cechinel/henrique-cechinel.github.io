@@ -1,21 +1,22 @@
-body{
-    background-image: url('../imgs/background_index.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+body, html {
     height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
     color: #FFF;
+    background-image: url('../imgs/background_index.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.container{
-    margin-top: 5% !important;
-    height: 100%;
+.container {
     align-content: center;
 }
 
-.card{
-    height: 200%;
-    margin-top: auto;
+.card {
+    background-color: rgba(0,0,0,0.5) !important;
+    margin-top: 15%;
     margin-bottom: auto;
     width: 200%;
-    background-color: rgba(0,0,0,0.5) !important;
 }
