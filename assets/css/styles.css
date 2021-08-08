@@ -1,13 +1,27 @@
-body, html {
+.home {
     height: 100%;
-    margin: 0;
+    width: 100%;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #FFF;
     background-image: url('../imgs/background_index.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+.birthday {
+    height: 100%;
+    width: 100%;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #FFF;
+    background-image: url('../imgs/stitch_wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
 }
 
 .container {
