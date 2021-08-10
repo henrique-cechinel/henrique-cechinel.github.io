@@ -12,10 +12,25 @@
 }
 
 .birthday {
+    /* background: url('../imgs/stitch_wallpaper.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    /* background-size: cover;
     background-image: url('../imgs/stitch_wallpaper.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+}
+
+#bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .container {

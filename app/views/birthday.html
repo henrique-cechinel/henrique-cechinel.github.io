@@ -1,46 +1,64 @@
+<img src="assets\imgs\stitch_wallpaper.jpg" id="bg" alt="">
+
 <div class="container-fluid birthday">
-  <div class="row justify-content" ng-show="zonaAcesso == 0" style="padding: 30px;">
+  <div class="row justify-content" ng-show="accessZone == 0" style="padding: 30px;">
     <div class="col"></div>
     <div class="col-10 text-center">
       <div class="form-group">
-        <label class="alert alert-info" for="accessCode">Insira seu código de convidado</label>
+        <label class="alert alert-info" for="accessCode">Insira seu código de convidado abaixo :)</label>
         <input ng-model="codigoAcesso" ng-change="verificaAcesso()" type="text" class="form-control" id="accessCode" placeholder="Digite o seu código!">
-        <div class="btn-group" role="group" style="padding: 30px;">
-          <button type="button" class="btn btn-primary" ng-click="setZonaAcesso(1)">1</button>
-          <button type="button" class="btn btn-primary" ng-click="setZonaAcesso(2)">2</button>
-        </div>
       </div>
     </div>
     <div class="col"></div>
   </div>
 
-  <div class="container-fluid" ng-if="zonaAcesso == 1">
+  <audio id="ohanaMeansFamily" src="assets/audios/OhanaMeansFamily.mp3"></audio>
+
+  <div class="container-fluid" ng-show="accessZone == 1">
     <div class="row justify-content" style="padding: 30px;">
       <div class="col text-center">
-        <video src="assets/videos/StitchIntroCompacto.mp4" width="1080" height="720" controls></video> <!-- autoplay -->
+        <video ng-show="videoNumber == 0" id="introStitch" src="assets/videos/StitchIntroCompacto.mp4" width="100%" height="100%" controls></video>
+        <video ng-show="videoNumber == 1" id="sadStitch" src="assets/videos/StitchTristeCompacto.mp4" width="100%" height="100%" controls></video>
+        <video ng-show="videoNumber == 2" id="happyStitch" src="assets/videos/StitchFelizCompacto.mp4" width="100%" height="100%" controls></video>
       </div>
-    </div>
-    <div class="row justify-content" style="padding: 30px;">
-      <div class="col"></div>
-      <div class="col-4 text-center">
-        <button type="button" class="btn btn-success btn-lg btn-block" ng-click="setZonaAcesso(2)">Continuar</button>
-      </div>
-      <div class="col"></div>
     </div>
   </div>
 
-  <div class="container-fluid" ng-if="zonaAcesso == 2">
+  <div class="container-fluid" ng-show="accessZone == 2">
     <div class="row justify-content" style="padding: 30px;">
       <div class="col"></div>
       <div class="col-8 text-center">
-        <div class="alert alert-info" role="alert">
-          <h4 class="alert-heading">Olá {{convidados}}, sejam bem-vindos ao meu convite animado :)</h4>
-          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-          <hr>
-          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        <div class="card" style="width: 100%;">
+          <div class="card-header">
+            {{convidados}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Em desenvolvimento!</h5>
+            <p class="card-text">Em desenvolvimento! Em desenvolvimento! Em desenvolvimento!.</p>
+            <div class="row">
+              <div class="col">
+                <button href="#" class="btn btn-danger btn-lg" ng-click="togglePresence(1)">
+                  <h3>Não poderei ir!</h3>
+                  <small>Não gosto do Stitch!</small>
+                </button>
+              </div>
+              <div class="col">
+                <button href="#" class="btn btn-success btn-lg" ng-click="togglePresence(2)">
+                  <h3>Confirmo a presença!</h3>
+                  <small>Eu amo o Stitch!</small>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            Em desenvolvimento!
+          </div>
         </div>
       </div>
       <div class="col"></div>
     </div>
   </div>
+
+
+
 </div>
