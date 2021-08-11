@@ -1,6 +1,6 @@
 <img src="assets\imgs\stitch_wallpaper.jpg" id="bg" alt="">
 
-<div class="container-fluid birthday">
+<div class="container-fluid">
   <div class="row justify-content" ng-show="accessZone == 0" style="padding: 30px;">
     <div class="col"></div>
     <div class="col-10 text-center">
@@ -24,34 +24,130 @@
     </div>
   </div>
 
-  <div class="container-fluid" ng-show="accessZone == 2">
+  <div class="container-fluid white" ng-show="accessZone == 2">
     <div class="row justify-content" style="padding: 30px;">
       <div class="col"></div>
       <div class="col-8 text-center">
-        <div class="card" style="width: 100%;">
+        <div class="card">
           <div class="card-header">
-            {{convidados}}
+            <h2 style="padding: 15px;">
+              {{convidados}}
+            </h2>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Em desenvolvimento!</h5>
-            <p class="card-text">Em desenvolvimento! Em desenvolvimento! Em desenvolvimento!.</p>
+
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapseData" class="btnInformacoes btn btn-warning">Data</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapseData">
+                  <div class="card card-body">
+                    <span><b>09/10/2021</b> - <b>16:00</b>h até a hora que Deus quiser!</span>
+                    <span class="badge badge-pill badge-secondary" style="padding: 8px; margin: 5px;">*Importante chegar no horário.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapseLocal" class="btnInformacoes btn btn-warning">Local</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapseLocal">
+                  <div class="card card-body">
+                    <span><i class="fas fa-tree"></i><b>  Minha casa  </b><i class="fas fa-tree"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapseRoupa" class="btnInformacoes btn btn-warning">Roupa</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapseRoupa">
+                  <div class="card card-body">
+                    <span>Venham com roupa confortável e tragam uma extra por garantia. <span class="badge badge-pill badge-secondary" style="padding: 8px; margin: 5px;">É sério</span></span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapseBebida" class="btnInformacoes btn btn-warning">Bebida</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapseBebida">
+                  <div class="card card-body">
+                    <span>Traga a sua própria bebida <b>alcoólica</b>!</span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapseDormitorio" class="btnInformacoes btn btn-warning">Dormitório</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapseDormitorio">
+                  <div class="card card-body">
+                    <span>Se quiser pode dormir aqui!</span>
+                    <span class="badge badge-pill badge-secondary" style="padding: 8px; margin: 5px;">*Avisar com antecedencia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target="#collapsePresente" class="btnInformacoes btn btn-warning">Presente</button>
+              </div>
+              <div class="col">
+                <div class="collapse" id="collapsePresente">
+                  <div class="card card-body">
+                    <span>
+                      <i class="fas fa-skull-crossbones"></i>
+                      <i class="fas fa-radiation"></i>
+                      <i class="fas fa-gift" style="margin: 0 5px 0 10px;"></i>
+                      Entrada permitida apenas mediante apresentação do presente!
+                      <i class="fas fa-gift" style="margin: 0 10px 0 5px;"></i>
+                      <i class="fas fa-radiation"></i>
+                      <i class="fas fa-skull-crossbones"></i>
+                    </span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row align-middle align-items-center" style="margin-top: 20px;">
+              <div class="col-2">
+                <button type="button" data-toggle="collapse" data-target=".collapseConfirmacao" class="btnInformacoes btn btn-warning">Confirmacao</button>
+              </div>
+              <div class="col">
+                <div class="collapse collapseConfirmacao">
+                  <div class="card card-body">
+                    <span>Confirmar presença até dia <b>06/09/2021</b>.</span> 
+                    <span class="badge badge-pill badge-secondary" style="padding: 8px; margin: 5px;">*Clica nos botões abaixo que o Stitch te ajuda a decidir!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-footer text-muted collapse collapseConfirmacao">
             <div class="row">
               <div class="col">
-                <button href="#" class="btn btn-danger btn-lg" ng-click="togglePresence(1)">
+                <button href="#" class="btn btn-danger btn-lg" ng-click="togglePresence(1)" style="padding: 20px;">
                   <h3>Não poderei ir!</h3>
                   <small>Não gosto do Stitch!</small>
                 </button>
               </div>
               <div class="col">
-                <button href="#" class="btn btn-success btn-lg" ng-click="togglePresence(2)">
+                <button href="#" class="btn btn-success btn-lg" ng-click="togglePresence(2)" style="padding: 20px;">
                   <h3>Confirmo a presença!</h3>
                   <small>Eu amo o Stitch!</small>
                 </button>
               </div>
             </div>
-          </div>
-          <div class="card-footer text-muted">
-            Em desenvolvimento!
           </div>
         </div>
       </div>

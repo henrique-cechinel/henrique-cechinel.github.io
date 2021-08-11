@@ -9,18 +9,18 @@ app.controller('BirthdayController', function($scope) {
   vm.codigoAcesso = "";
   vm.accessZone = 0;
   vm.convidados = "";
-
+  
   swal("Sound on!", "Aumente o som!", "info", {buttons: false, timer: 4000});
-
+  
   setAccessZone = function(zone){
     console.log(zone);
     vm.accessZone = zone;
   };
-
+  
   setVideoNumber = function(number){
     vm.videoNumber = number;
   }
-
+  
   refreshGuests = function(){
     vm.convidados = codigosAcesso.get(vm.codigoAcesso.toUpperCase())
   };
@@ -96,8 +96,15 @@ app.controller('BirthdayController', function($scope) {
 
       $scope.$apply(function(){
         setAccessZone(2);
+
+        swal("Não se esqueça!", "Não se esqueça de me avisar no Whatsapp!", "info");
       })
     }
   };
+
+  $('.btnInformacoes').click(function() {
+    $(this).toggleClass('btn-warning');
+    $(this).toggleClass('btn-success');
+});
 
 });
