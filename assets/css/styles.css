@@ -11,26 +11,18 @@
     position: fixed;
 }
 
-.birthday {
-    /* background: url('../imgs/stitch_wallpaper.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    /* background-size: cover;
-    background-image: url('../imgs/stitch_wallpaper.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-}
-
 #bg {
     position: fixed; 
     top: 0; 
     left: 0; 
       
-    /* Preserve aspet ratio */
     min-width: 100%;
     min-height: 100%;
+}
+
+.white {
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #FFF;
 }
 
 .container {
@@ -39,7 +31,7 @@
 
 .card {
     background-color: rgba(0,0,0,0.5) !important;
-    margin-top: 15%;
+    margin-top: auto;
     margin-bottom: auto;
-    width: 200%;
+    width: 100%;
 }
