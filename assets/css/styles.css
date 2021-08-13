@@ -1,7 +1,7 @@
 .home {
     height: 100%;
     width: 100%;
-    font: 400 15px/1.8 "Lato", sans-serif;
+    font: 400 1rem/1.8 "Lato", sans-serif;
     color: #FFF;
     background-image: url('../imgs/background_index.jpg');
     background-position: center;
@@ -11,7 +11,7 @@
     position: fixed;
 }
 
-#bg {
+.fullScreen, .fullScreenVideo {
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -20,8 +20,17 @@
     min-height: 100%;
 }
 
+.fullScreenVideo {
+    background-color: black;
+}
+
+/* #collapseRoupa {
+    transition-timing-function: ease;
+    transition-duration: 5s;
+} */
+
 .white {
-    font: 400 15px/1.8 "Lato", sans-serif;
+    font: 400 1rem/1.8 "Roboto", sans-serif;
     color: #FFF;
 }
 

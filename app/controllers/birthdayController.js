@@ -2,7 +2,7 @@ app.controller('BirthdayController', function($scope) {
   var vm = $scope;
 
   const codigosAcesso = new Map();
-  codigosAcesso.set('H', "Henrique e Maria Luiza");
+  codigosAcesso.set('HENRIZA-BOLT', "Henrique e Maria Luiza");
   codigosAcesso.set('FEINE-BLS', "Felipe e Thaine");
   codigosAcesso.set('HENARA-CURITIBA', "Henrique e Nara");
 
@@ -64,8 +64,9 @@ app.controller('BirthdayController', function($scope) {
           document.getElementById('introStitch').removeEventListener('ended', introStitchHandler, false);
 
           $scope.$apply(function(){
-            console.log("teste");
             setAccessZone(2);
+
+            collapseAllCollapses();
           })
         }
       })
@@ -102,9 +103,18 @@ app.controller('BirthdayController', function($scope) {
     }
   };
 
-  $('.btnInformacoes').click(function() {
-    $(this).toggleClass('btn-warning');
-    $(this).toggleClass('btn-success');
-});
+  collapseAllCollapses = function(){
+    var listTargets = ['collapseData','collapseLocal','collapseRoupa','collapseBebida','collapseDormitorio','collapsePresente','collapseConfirmacao'];
+    var delay = 10000;
+
+    listTargets.forEach(function(target){
+      setInterval(function(){
+        $("#"+target).collapse();
+        $("#btn_"+target).addClass('btn-success');
+        $("#btn_"+target).removeClass('btn-warning');
+      }, delay);
+      delay += 1000;
+    });
+  }
 
 });
