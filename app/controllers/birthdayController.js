@@ -2,9 +2,18 @@ app.controller('BirthdayController', function($scope) {
   var vm = $scope;
 
   const codigosAcesso = new Map();
-  codigosAcesso.set('HENRIZA-BOLT', "Henrique e Maria Luiza");
-  codigosAcesso.set('FEINE-BLS', "Felipe e Thaine");
-  codigosAcesso.set('HENARA-CURITIBA', "Henrique e Nara");
+  codigosAcesso.set('HENRIZA-22',  "Henrique e Maria Luiza");
+  codigosAcesso.set('FEINE-34',    "Felipe e Thaine");
+  codigosAcesso.set('HENARA-51',   "Henrique e Nara");
+  codigosAcesso.set('HENALIA-39',  "Natalia e Henrique");
+  codigosAcesso.set('LUARIA-27',   "Maria Eduarda e Lucas");
+  codigosAcesso.set('LUROLINA-68', "Carolina e Lucas");
+  codigosAcesso.set('GUSUNA-52',   "Bruna e Gustavo");
+  codigosAcesso.set('DATALIA-77',  "David e Natalia");
+  codigosAcesso.set('MATHEUS-96',  "Matheus");
+  codigosAcesso.set('JULIA-10',    "Julia");
+  codigosAcesso.set('PEDRO-09',    "Pedro");
+  codigosAcesso.set('DADNA-14',    "Pai e Mãe");
 
   vm.codigoAcesso = "";
   vm.accessZone = 0;
