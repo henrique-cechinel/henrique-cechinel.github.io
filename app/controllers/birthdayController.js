@@ -14,6 +14,7 @@ app.controller('BirthdayController', function($scope) {
   codigosAcesso.set('JULIA-10',    "Julia");
   codigosAcesso.set('PEDRO-09',    "Pedro");
   codigosAcesso.set('DADNA-14',    "Pai e Mãe");
+  codigosAcesso.set('MARWILL-40',  "Will e Mari");
 
   vm.codigoAcesso = "";
   vm.accessZone = 0;
