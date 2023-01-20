@@ -12,6 +12,11 @@ app.config(function($routeProvider) {
       templateUrl : 'app/views/birthday.html',
       controller  : 'BirthdayController'
     })
+
+    .when('/software', {
+      templateUrl : 'app/views/software.html',
+      controller  : 'SoftwareController'
+    })
   
     .otherwise({redirectTo: '/'});
 });

@@ -1,0 +1,25 @@
+<div class="home">
+	<div class="container">
+		<div class="row">
+			<div class="card m-3">
+				<div class="card-body">
+					<div class="row">
+						<div class="card m-1" ng-repeat="categories in softwareList">
+							<div class="card-header">
+								{{categories.header}}
+							</div>
+							<div class="card-body">
+								<div class="m-1" ng-repeat="software in categories.items">
+									<a href="{{software.url}}" class="btn btn-secondary btn-block">{{software.description}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<span>* Links provided are sourced from official websites as of January 20, 2023!</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
